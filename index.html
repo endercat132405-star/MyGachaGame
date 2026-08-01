@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gacha Studio</title>
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="overlay"></div>
+      <div class="hud">
+        <div class="hud-pill"><strong id="pullsCount">0</strong><span>Pulls</span></div>
+        <div class="hud-pill"><strong id="winsCount">0</strong><span>Rare+</span></div>
+        <div class="hud-pill"><strong id="legendaryCount">0</strong><span>Legendary</span></div>
+      </div>
+
+      <div class="stage" id="stage">
+        <div class="machine-frame">
+          <img class="machine-art" src="./Images/Zyth/Other assets/Gacha Machine.png" alt="Gacha machine" />
+          <div class="capsule-stage" id="capsuleStage">
+            <div class="capsule-ball" id="capsuleBall"></div>
+          </div>
+          <img class="explosion-art" src="./Images/Zyth/Other assets/deltarune-explosion.gif" alt="Explosion" />
+        </div>
+
+        <div class="result-card" id="resultCard">
+          <div class="result-inner">
+            <h2>Tap the capsule</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="pullButton">Roll Capsule</button>
+      </div>
+
+      <div class="secret-overlay" id="secretOverlay" aria-hidden="true">
+        <img class="secret-tree" id="secretTree" src="./Images/Zyth/Other assets/deltarune-tree.gif" alt="Secret tree" />
+      </div>
+
+      <img class="egg-item" id="eggItem" src="./Images/Zyth/Other assets/Egg_item.png" alt="Egg item" />
+      <audio id="backgroundMusic" src="./Quiet_Water_music.ogg" loop></audio>
+      <audio id="secretMusic" src="./Man_nes_music.ogg" loop></audio>
+      <audio id="treeSound" src="./Snd_board_ominous_music.wav.ogg"></audio>
+
+      <div class="rarity-legend" aria-label="Rarity legend">
+        <div class="legend-title">Ranks</div>
+        <div class="legend-item"><span class="legend-color common">Common</span><span>50%</span></div>
+        <div class="legend-item"><span class="legend-color uncommon">Uncommon</span><span>35%</span></div>
+        <div class="legend-item"><span class="legend-color epic">Epic</span><span>20%</span></div>
+        <div class="legend-item"><span class="legend-color rare">Rare</span><span>15%</span></div>
+        <div class="legend-item"><span class="legend-color mythic">Mythic</span><span>10%</span></div>
+        <div class="legend-item"><span class="legend-color legendary">Legendary</span><span>5%</span></div>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
